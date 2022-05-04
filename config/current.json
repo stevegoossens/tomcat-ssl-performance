@@ -1,0 +1,16 @@
+{
+  "acceptCount": 100,
+  "acceptorThreadCount": 1,
+  "asyncTimeout": 3000,
+  "connectionTimeout": 60000,
+  "keepAliveTimeout": 60000,
+  "maxConnections": 8192,
+  "maxCookieCount": 200,
+  "maxHeaderCount": 100,
+  "maxHttpHeaderSize": 16384,
+  "maxKeepAliveRequests": 100,
+  "maxParameterCount": 10000,
+  "maxThreads": 64,
+  "minSpareThreads": 64,
+  "processorCache": 500
+}
