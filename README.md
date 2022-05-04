@@ -63,7 +63,7 @@ python generate-server-xml.py tomcat-tls-1
 
 This will use the `config/tomcat-tls-1.json` file to create/overwrite the `server.xml` file.
 
-## Run Tomcat along with InfluxDB and Grafana
+### Run Tomcat along with InfluxDB and Grafana
 
 ```
 docker-compose up -d grafana influxdb tomcat
@@ -75,7 +75,7 @@ If you are repeating the test and have updated the `server.xml` file you can alt
 docker-compose up -d --force-recreate tomcat
 ```
 
-## Run K6 load test
+### Run K6 load test
 
 ```
 docker-compose run --rm k6 run /scripts/load-test.js

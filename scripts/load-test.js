@@ -21,8 +21,10 @@ const params = {
   timeout: "5s"
 }
 
+const tomcatHost = __ENV.TOMCAT_HOST || 'localhost'
+
 export default function () {
-  const res = http.get(`https://tomcat:8443`, params)
+  const res = http.get(`https://${tomcatHost}:8443`, params)
   const success = check(res, {
     'response code was 200': (res) => res.status == 200,
   })

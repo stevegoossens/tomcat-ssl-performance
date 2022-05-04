@@ -10,7 +10,7 @@
   "maxHttpHeaderSize": 16384,
   "maxKeepAliveRequests": -1,
   "maxParameterCount": 10000,
-  "maxThreads": 96,
-  "minSpareThreads": 96,
+  "maxThreads": 64,
+  "minSpareThreads": 64,
   "processorCache": 500
 }
