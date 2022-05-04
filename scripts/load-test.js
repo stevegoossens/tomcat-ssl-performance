@@ -26,10 +26,12 @@ export default function () {
   const success = check(res, {
     'response code was 200': (res) => res.status == 200,
   })
-  check(res, {
-    'response time < 1s': (res) => res.timings.duration < 1000,
-  })
-  if (!success) {
+
+  if (success) {
+    check(res, {
+      'response time < 1s': (res) => res.timings.duration < 1000,
+    })
+  } else {
     errorRate.add(1)
   }
   sleep(1)
