@@ -84,10 +84,9 @@
 
         <!-- Define a low HTTP Connector intended for use by ELB Healthchecks
              This should not be accessible by anything except the service's Load Balancer -->
-        <Connector maxThreads="1"
-                   minSpareThreads="1"
-                   port="8080"
-                   protocol="HTTP/1.1"
+        <Connector port="8080"
+                   protocol="org.apache.coyote.http11.Http11NioProtocol"
+                   ${config}
         />
 
 
