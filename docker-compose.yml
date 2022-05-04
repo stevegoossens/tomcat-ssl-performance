@@ -54,3 +54,9 @@ services:
     volumes:
       - /tmp/testing.keystore:/tmp/testing.keystore
       - ./server.xml:/usr/local/tomcat/conf/server.xml
+  
+  nginx-proxy:
+    build: ./nginx-proxy
+    ports:
+      - 9080:80
+      - 9443:443
