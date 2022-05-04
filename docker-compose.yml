@@ -3,6 +3,7 @@ version: '3.4'
 networks:
   k6:
   grafana:
+  tomcat:
 
 services:
   influxdb:
@@ -48,6 +49,8 @@ services:
   tomcat:
     container_name: tomcat
     image: tomcat:7.0.76-jre8
+    networks:
+      - tomcat
     ports:
       - 8080:8080
       - 8443:8443
@@ -57,6 +60,8 @@ services:
   
   nginx-proxy:
     build: ./nginx-proxy
+    networks:
+      - tomcat
     ports:
       - 9080:80
       - 9443:443
